@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                     if (breedsMap != null) {
                         for (breed in breedsMap.keys)
                             breedsList.add(breed)
-                        setSpinner(breedsList)
+                        setSpinner()
 
                     }
                 } else {
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setSpinner(breedsList: MutableList<String>) {
+    private fun setSpinner() {
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, breedsList)
         spinner.adapter = spinnerAdapter
 
